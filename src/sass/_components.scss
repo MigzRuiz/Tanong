@@ -1,0 +1,30 @@
+.progress {
+  height: 2rem;
+  //position: relative;
+  background: $color-grey-light;
+  //   border-radius: 1rem;
+  //padding: 1rem;
+  margin-bottom: 1rem;
+
+  div {
+    background-color: orange;
+    width: 20%;
+    height: 2rem;
+    border-radius: 1rem;
+  }
+}
+
+.modal {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  z-index: 99;
+
+  background-color: $color-accent;
+
+  display: grid;
+  place-items: center center;
+
+  &__result {
+  }
+}

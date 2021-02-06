@@ -1,0 +1,45 @@
+$color-background-dark: #c5c9d2;
+$color-background-light: #e8ebef;
+$color-grey-light: #f4f7f9;
+$color-grey-dark: #323337;
+$color-accent: #745cff;
+$color-white: #fff;
+
+$color-true: #2a9d8f;
+$color-true-2: #264653;
+$color-false: #e76f51;
+$color-false-2: #f4a261;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  color: black;
+  background-color: $color-background-dark;
+  //   background-image: linear-gradient(
+  //     to left bottom,
+  //     var(--color-background-light),
+  //     var(--color-background-dark)
+  //   );
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
