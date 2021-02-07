@@ -15,89 +15,100 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.4rem;
-  color: black;
-  background-color: #c5c9d2;
+  color: #fff;
+  background-color: #fff;
   min-height: 100vh;
 }
 
-body {
-  display: grid;
-  place-items: center center;
-}
-
 .container {
-  width: 80vw;
-  height: 90%;
-  background-color: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 8vw repeat(2, 1fr);
 }
-.container .flashcard {
-  background-color: #fff;
-  position: relative;
-  width: 70%;
-  height: 90%;
-  margin: auto auto;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+.container .sidebar {
+  width: 100%;
+  background-color: #745cff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .sidebar__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .sidebar__item {
+  margin-top: 3rem;
+  list-style: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.container .question {
+  padding: 3rem;
+  background-color: #745cff;
   display: grid;
   place-items: center center;
-  overflow: hidden;
 }
-.container .flashcard__box {
-  padding: 5rem;
-  z-index: 20;
-}
-.container .flashcard__category {
-  background-color: #745cff;
+.container .question__category {
+  border: 3px solid #ffc800;
   width: max-content;
-  padding: 1rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  color: #ffc800;
+  font-family: "Open Sans";
+}
+.container .question__text {
   color: #fff;
-  border-radius: 50rem;
+  font-size: 5rem;
 }
-.container .flashcard__question {
-  font-family: "Poppins";
-  font-size: 4rem;
-  font-weight: 500;
+.container .choices {
+  display: grid;
+  place-items: center center;
 }
-.container .flashcard__btn {
-  border: none;
+.container .choices__box {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.container .choices__box li {
   transition: all 0.3s ease;
-  height: 100%;
-  position: absolute;
-  font-size: 1.8rem;
-  padding-top: 40vh;
 }
-.container .flashcard__btn p {
+.container .choices__box:hover > li {
+  opacity: 0.5;
+}
+.container .choices__box:hover li:hover {
+  transform: translateY(-2rem);
+  opacity: 1;
+}
+.container .choices__box:hover li:hover p {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+.container .choices__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .choices__btn {
+  border: none;
+  background: none;
+  font-size: 15rem;
+}
+.container .choices__btn:active {
+  transform: translateY(1rem);
+}
+.container .choices__text {
+  color: #745cff;
   font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: inherit;
-}
-.container .flashcard__btn-true {
-  width: 50%;
-  left: 0;
-}
-.container .flashcard__btn-true:hover {
-  background-color: #2a9d8f;
-  color: #264653;
-  transform: scale(1.3);
-  z-index: 1;
-}
-.container .flashcard__btn-false {
-  right: 0;
-  width: 50%;
-}
-.container .flashcard__btn-false:hover {
-  background-color: #e76f51;
-  transform: scale(1.3);
-  color: #f4a261;
-  z-index: 1;
+  opacity: 0;
 }
 
 .progress {

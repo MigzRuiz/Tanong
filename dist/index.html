@@ -5,35 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer="" src="/index.250b04c7.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.1206e35b.css">
-    <title>tanong</title>
+    <title>Tanong</title>
   </head>
   <body>
     <div class="container">
-      <div class="progress">
-        <div class="progress__meter"></div>
+      <div class="sidebar">
+        <div class="sidebar__logo">logo</div>
+        <ul class="sidebar__items">
+          <li class="sidebar__item sidebar__item--1"></li>
+          <li class="sidebar__item sidebar__item--2"></li>
+          <li class="sidebar__item sidebar__item--3"></li>
+          <li class="sidebar__item sidebar__item--4"></li>
+          <li class="sidebar__item sidebar__item--5"></li>
+        </ul>
       </div>
-      <div class="flashcard">
-        <!-- <div class="modal">
-          <div class="modal__box">
-            <div class="modal__result">CORRECT!</div>
-            <button class="modal__next">Next question</button>
-          </div>
-        </div> -->
-        <div class="flashcard__box">
-          <div class="flashcard__category">General Knowledge</div>
-          <div class="flashcard__question">
-            "Coca-Cola&#039;s original colour was green."
-          </div>
+      <div class="question">
+        <div class="question__box">
+          <h3 class="question__category">General Knowledge</h3>
+          <h1 class="question__text">
+            Furby was released in 1998. True or False?
+          </h1>
         </div>
-
-        <button class="flashcard__btn flashcard__btn-true">
-          <p class="test">true</p>
-        </button>
-        <button class="flashcard__btn flashcard__btn-false">
-          <p class="test">False</p>
-        </button>
+      </div>
+      <div class="choices">
+        <ul class="choices__box">
+          <li class="choices__item">
+            <button class="choices__btn choices__btn--true">👍</button>
+            <p class="choices__text">True</p>
+          </li>
+          <li class="choices__item">
+            <button class="choices__btn choices__btn--false">👎</button>
+            <p class="choices__text">False</p>
+          </li>
+        </ul>
       </div>
     </div>
   </body>

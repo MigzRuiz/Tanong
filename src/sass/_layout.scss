@@ -1,93 +1,110 @@
-body {
-  display: grid;
-  place-items: center center;
-}
-
 .container {
-  //margin: 10vh auto;
-  width: 80vw;
-  height: 90%;
-  background-color: $color-white;
-  border-radius: 1.5rem;
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 8vw repeat(2, 1fr);
 
-  .flashcard {
-    background-color: $color-white;
-    position: relative;
+  .sidebar {
+    width: 100%;
+    background-color: $color-accent;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    width: 70%;
-    height: 90%;
-    margin: auto auto;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+    &__logo {
+      // justify-self: flex-start;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      margin-top: 3rem;
+      list-style: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 5px solid $color-white;
+      border-radius: 50%;
+    }
+  }
+
+  .question {
+    padding: 3rem;
+    background-color: $color-accent;
     display: grid;
     place-items: center center;
 
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: repeat(3, 1fr);
+    &__category {
+      border: 3px solid $color-yellow;
+      width: max-content;
+      padding: 1.2rem;
+      border-radius: 1rem;
 
-    overflow: hidden;
+      //typography
+      color: $color-yellow;
+      font-family: "Open Sans";
+    }
+
+    &__text {
+      //Typography
+      color: $color-white;
+      font-size: 5rem;
+    }
+  }
+
+  .choices {
+    display: grid;
+    place-items: center center;
 
     &__box {
-      padding: 5rem;
-      // grid-column: 1/-1;
-      // grid-row: 2/3;
-      z-index: 20;
-    }
-    &__category {
-      background-color: $color-accent;
-      width: max-content;
-      padding: 1rem;
-      color: $color-white;
-      border-radius: 50rem;
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+
+      li {
+        transition: all 0.3s ease;
+      }
+
+      &:hover > li {
+        opacity: 0.5;
+      }
+
+      &:hover li:hover {
+        transform: translateY(-2rem);
+        opacity: 1;
+
+        p {
+          opacity: 1;
+          transition: opacity 0.9s ease;
+        }
+      }
     }
 
-    &__question {
-      font-family: "Poppins";
-      font-size: 4rem;
-      font-weight: 500;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     &__btn {
       border: none;
-      transition: all 0.3s ease;
-      // padding-top: 90%;
-      height: 100%;
-      position: absolute;
-      font-size: 1.8rem;
-      padding-top: 40vh;
+      background: none;
+      font-size: 15rem;
 
-      p {
-        font-size: 2rem;
-        text-transform: uppercase;
-        //border: solid 1px $color-true;
-        font-weight: 400;
-        color: inherit;
+      &:active {
+        transform: translateY(1rem);
       }
+    }
 
-      &-true {
-        width: 50%;
-        left: 0;
-
-        &:hover {
-          background-color: $color-true;
-          color: $color-true-2;
-          transform: scale(1.3);
-          z-index: 1;
-        }
-      }
-      &-false {
-        right: 0;
-        width: 50%;
-
-        &:hover {
-          background-color: $color-false;
-          transform: scale(1.3);
-          color: $color-false-2;
-          z-index: 1;
-        }
-      }
+    &__text {
+      //typography
+      color: $color-accent;
+      font-size: 2rem;
+      opacity: 0;
     }
   }
 }

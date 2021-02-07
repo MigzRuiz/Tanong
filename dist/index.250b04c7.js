@@ -474,17 +474,6 @@ const getData = async function () {
   }
 };
 getData();
-const btnTrue = document.querySelector(".flashcard__btn-true");
-const btnFalse = document.querySelector(".flashcard__btn-false");
-const progressMeter = document.querySelector(".progress__meter");
-const modalBtn = document.querySelector(".modal__next");
-btnTrue.addEventListener("click", () => {
-  progressMeter.value = 74;
-});
-btnFalse.addEventListener("click", () => {});
-modalBtn.addEventListener("click", () => {
-  console.log("next question");
-});
 
 },{"./config.js":"6pr2F"}],"6pr2F":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
