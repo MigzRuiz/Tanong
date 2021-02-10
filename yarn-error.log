@@ -1,0 +1,65 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @babel/core -D
+
+PATH: 
+  /Users/miguelanthonyruiz/Development/quizapp/node_modules/.bin:/Users/miguelanthonyruiz/Development/node_modules/.bin:/Users/miguelanthonyruiz/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  10.15.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/miguelanthonyruiz/Development/quizapp/package.json: Unexpected token } in JSON at position 347
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:109:13
+
+npm manifest: 
+  {
+    "name": "Tanong",
+    "version": "2.0.0",
+    "description": "Quiz App",
+    "main": "index.js",
+    "scripts": {
+      "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+      "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
+      "clean": "rimraf ./development && rimraf ./.cache"
+    },
+  },
+    "keywords": [
+      "parcel"
+    ],
+    "author": "Miguel Ruiz",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/bradtraversy/vanilla-parcel-boilerplate/issues"
+    },
+    "homepage": "https://github.com/bradtraversy/vanilla-parcel-boilerplate#readme",
+    "devDependencies": {
+      "@babel/cli": "^7.12.13",
+      "@babel/core": "^7.12.13",
+      "@babel/plugin-proposal-class-properties": "^7.12.13",
+      "@babel/plugin-transform-runtime": "^7.9.0",
+      "@babel/preset-env": "^7.12.13",
+      "@babel/runtime-corejs2": "^7.9.2",
+      "parcel-bundler": "^1.12.4",
+      "rimraf": "^3.0.2",
+      "sass": "^1.26.3"
+    },
+    "dependencies": {
+      "axios": "^0.19.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
